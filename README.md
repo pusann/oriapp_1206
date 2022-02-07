@@ -1,24 +1,77 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             | Type     | Options        |
+| -------------------| ---------| ---------------|
+| first_name         | string   | null: false    |  
+| last_name          | string   | null: false    | 
+| first_name_kana    | string   | null: false    |
+| last_name_kana     | string   | null: false    |
+| nickname           | string   | null: false    |
+| email              | string   | null: false    |
+| sex                | string   | null: false    |
+| age                | integer  | null: false    |
+| encrypted_password | string   | null: false    |
+| category_id        | integer  | null: false    |
 
-* Ruby version
+- belong_to :my_pages
+- has_many :articles
+- has_many :rooms
+- has_many :room_users
+- has_many :messages
 
-* System dependencies
+## my_pages テーブル
 
-* Configuration
+| Column | Type    | Options     |
+| -------| --------| ------------|
+| name   | string  | null: false |
+| title  | string  | null: false |
 
-* Database creation
+- has_one :users
+- has_one :articles
 
-* Database initialization
+##  articles テーブル
 
-* How to run the test suite
+| Column        | Type    | Options     |
+| --------------| --------| ------------|
+| nickname      | string  | null: false |
+| title         | string  | null: false |
+| text          | text    | null: false |
+| sex           | string  | null: false |
+| age           | integer | null: false |
 
-* Services (job queues, cache servers, search engines, etc.)
+- belong_to :users
+- belong_to :my_pages
 
-* Deployment instructions
+## rooms テーブル
 
-* ...
+| Column       | Type    | Options     |
+| -------------| --------| ------------|
+| name         | string  | null: false |
+
+- belong_to :users
+- has_many :room_users
+- has_many :messages
+
+## room_users テーブル
+
+| Column       | Type       | Options                      |
+| -------------| -----------| -----------------------------|
+| nickname     | string     | null: false,foreign_key:true |
+| room         | references | null: false,foreign_key:true |
+
+- has_many :room_users
+- has_many :users, through: :room_users
+- has_many :messages
+
+## messages テーブル
+
+| Column       | Type       | Options                         |
+| -------------| -----------| --------------------------------|
+| content      | string     |                                 |
+| nickname     | string     | null: false,foreign_key:true    |
+| room         | references | null: false,foreign_key:true    |
+
+- belongs_to :room
+- belongs_to :user
