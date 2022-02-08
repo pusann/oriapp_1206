@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
-
-  def new
+  def index
   end
-  
+  def  new
+  end
 end

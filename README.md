@@ -10,7 +10,7 @@
 | last_name_kana     | string   | null: false    |
 | nickname           | string   | null: false    |
 | email              | string   | null: false    |
-| sex                | string   | null: false    |
+| sex_id             | string   | null: false    |
 | age                | integer  | null: false    |
 | encrypted_password | string   | null: false    |
 | category_id        | integer  | null: false    |

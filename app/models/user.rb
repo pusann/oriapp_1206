@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :last_name_kana, presence: true
   validates :nickname, presence: true
   validates :email, presence: true
-  validates :sex, presence: true
+  validates :sex_id, presence: true
   validates :age, presence: true
   validates :encrypted_password, presence: true
   validates :category_id, presence:  true

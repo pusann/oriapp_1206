@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_07_062734) do
+ActiveRecord::Schema.define(version: 2022_02_08_015549) do
+
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "sexes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -20,7 +30,7 @@ ActiveRecord::Schema.define(version: 2022_02_07_062734) do
     t.string "first_name_kana", null: false
     t.string "last_name_kana", null: false
     t.string "nickname", null: false
-    t.string "sex", null: false
+    t.string "sex_id", null: false
     t.integer "age", null: false
     t.integer "category_id", null: false
     t.string "reset_password_token"
