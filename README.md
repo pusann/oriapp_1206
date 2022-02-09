@@ -58,7 +58,7 @@
 
 | Column       | Type       | Options                      |
 | -------------| -----------| -----------------------------|
-| nickname     | string     | null: false,foreign_key:true |
+| user         | string     | null: false,foreign_key:true |
 | room         | references | null: false,foreign_key:true |
 
 - has_many :room_users

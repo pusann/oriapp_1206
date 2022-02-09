@@ -1,0 +1,54 @@
+.edit input[type=text]{
+  width: 90%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 2px solid #ddd;
+  box-sizing: border-box;
+}
+.edit #contents{
+  width: 90%;
+  min-height: 700px;
+  height: auto;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 2px solid #ddd;
+  box-sizing: border-box;
+}
+.edit #description{
+  width: 90%;
+  min-height: 200px;
+  height: auto;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 2px solid #ddd;
+  box-sizing: border-box;
+}
+.edit button{
+  display: inline-block;
+  margin: 1.0em 1.0em;
+}
+.edit #draft{
+  background-color: #555555;
+  color: #fff;
+  border-radius: 5px;
+}
+.edit #draft:hover{
+  opacity: 0.7;
+}
+.edit #preview{
+  background-color: #2b52cd;
+  color: #fff;
+  border-radius: 5px;
+}
+.edit #preview:hover{
+  opacity: 0.7;
+}
+.edit #release{
+  background-color: #2d8b58;
+  color: #fff;
+  border-radius: 5px;
+}
+.edit #release:hover{
+  opacity: 0.7;
+}
