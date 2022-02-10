@@ -38,7 +38,7 @@
 | nickname      | string  | null: false |
 | title         | string  | null: false |
 | text          | text    | null: false |
-| sex           | string  | null: false |
+| sex_id        | string  | null: false |
 | age           | integer | null: false |
 
 - belong_to :users

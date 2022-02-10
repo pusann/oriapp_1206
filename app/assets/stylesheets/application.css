@@ -1,0 +1,28 @@
+.top-page-header{
+  background-color: white;
+}
+.lists-left {
+  background-color: white;
+  font-size: 2.5vh;
+  display: flex;
+  width: 400px;
+  justify-content: space-evenly;
+}
+.lists-right {
+  background-color: white;
+  font-size: 2.5vh;
+  display: flex;
+  width: 400px;
+  justify-content: space-evenly;
+}
+.image-contents {
+  width: 300vw;
+  height: 200vh;
+  background-color: white;
+  background-image: image-url(../articles/top.001.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  top: 10px;
+  left: 10px;
+}
