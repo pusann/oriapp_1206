@@ -5,6 +5,13 @@ class ArticlesController < ApplicationController
   def  new
     @articles = Article.new
   end
+  def created
+    @article = Article.new(articles_params)
+    if @article.save
+      redirect_to  root_path
+    end
+  end
+  
   private
   def articles_params
     params.require(:article).parmit(:nickname,:title,:text,:sex_id,:age).merge(user_id: current_user.id)
