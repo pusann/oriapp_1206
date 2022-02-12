@@ -1,29 +1,62 @@
 .top-page-header{
   background-color: white;
+  display: flex;
 }
 .lists-left {
+  display: flex;
+  justify-content: space-between;
+}
+.lists {
   background-color: white;
   font-size: 2.5vh;
   color: black;
-  display: flex;
-  width: 400px;
-  justify-content: space-evenly;
+  margin-right: 3vw;
+  display: inline-block;
+  flex-direction: row;
+  list-style: none;
+  border-bottom: 2px solid pink;
 }
-.lists-right {
+
+.post {
   background-color: white;
   font-size: 2.5vh;
   color: black;
-  display: flex;
-  width: 400px;
-  justify-content: space-evenly;
+  display: inline-block;
+  list-style: none;
+  border-bottom: 2px solid pink;
 }
-.image-contents {
+.list-right {
+  display: flex;
+  justify-content: space-between;
+}
+.login {
+  background-color: white;
+  font-size: 2.5vh;
+  color: black;
+  margin-right: 3vw;
+  display: inline-block;
+  list-style: none;
+  border-bottom: 2px solid pink;
+}
+.singup {
+  background-color: white;
+  font-size: 2.5vh;
+  color: black;
+  display: inline-block;
+  list-style: none;
+  border-bottom: 2px solid pink;
+}
+.image-top {
   background-color: white;
   background-image: image-url('images/top.001.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100vw;
   height: 100vh;
 }
 .serivice-left {
