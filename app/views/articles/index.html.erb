@@ -1,37 +1,32 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheets" href="application.css">
+  <header>
+    <%# <meta charset="UTF-8">
+    <link rel="stylesheets" href="application.css"> %>
        <div class="top-page-header">
-        <ul class="lists-left">
-          <li>
-          <a class="lists" href="/user/chatroom">チャットルーム</a>
-          </li>
-           <li>
-           <a class="post" href="/user/post">投稿する</a>
-           </li>
-        </ul>
-          <ul class="list-right">
-           <li>
-            <a class="login" href="/user/login">ログイン</a>
-            
-            </li>
-              <li>
-               <a class="singup" href="/user/singup">新規登録</a>
-               </li>
-          </ul>
-        </div>
+       <% if user_signed_in? %>
+         <div class="lists-left">
+         <%= link_to "ログアウト",articles_path,method: :delete, class: "logout" %>
+         <%= link_to "投稿する",new_article_path, class: "post"%>
+         <%= link_to "チャットルーム",message_index_path, class: "lists"%>
+         </div>
+        <% else %>
+          <div class="list-right">
+          <%= link_to "ログイン",new_user_session_path,class: "login"%>
+          <%= link_to "新規登録",new_user_registration_path, class: "singup"%>
+          </div>
+        <% end %>
          <div class="image-header">
           <div class="image-top"  style="background:url(images/top.01.png); background-size:cover;">
           </div>
          </div>
-    </head>
+    </header>
     <body>
        <div class="body-top-page">
          <div class="image-left"  style="background:url(images/top.003.png); background-size:cover;">
          </div>
          <div class="image-right"  style="background:url(images/top.002.png); background-size:cover;">
          </div>
+        </div>
   </body>
 </html>

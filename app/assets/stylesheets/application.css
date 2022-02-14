@@ -1,6 +1,5 @@
 .top-page-header{
   background-color: white;
-  display: flex;
 }
 .lists-left {
   display: flex;
@@ -25,25 +24,21 @@
   list-style: none;
   border-bottom: 2px solid pink;
 }
-.list-right {
+
+ .list-right {
   display: flex;
-  justify-content: space-between;
 }
 .login {
   background-color: white;
   font-size: 2.5vh;
   color: black;
   margin-right: 3vw;
-  display: inline-block;
-  list-style: none;
   border-bottom: 2px solid pink;
 }
 .singup {
   background-color: white;
   font-size: 2.5vh;
   color: black;
-  display: inline-block;
-  list-style: none;
   border-bottom: 2px solid pink;
 }
 .image-top {

@@ -3,13 +3,14 @@
   <div class="top-page-header">
     <ul class="lists-left">
     <% if user_siged_in? %>
-    <li><%= link_to current_user.nickname, "#", class:"user-nickname" %>
-    <li><%= link_to'ログアウト', path,method: :delete, class: "logout" %>
-    <li><%= link_to 'チャットルーム',path, class: "lists" %></li>
-    <li><%= link_to '投稿する',path, class: "post"%></li>
+    <li><%= link_to current_user.nickname, "#", class:"user-nickname" %></li>
+    <li><%= link_to'ログアウト', articles_path,method: :delete, class: "logout" %></li>
+    <li><%= link_to 'チャットルーム',message_index_path, class: "lists" %></li>
+    <li><%= link_to '投稿する', new_article_path, class: "post"%></li>
     <% else %>
-    <li><%= link_to 'ログイン',path,class: "login" %></li>
-    <li><%= link_to'新規登録',path, class: "singup" %></li>
+    <li><%= link_to 'ログイン', new_user_session_path,class: "login" %></li>
+    <li><%= link_to'新規登録', new_user_registration_path, class: "singup" %></li>
     <%  end %>
     </ul>
   </div>
+</head>
