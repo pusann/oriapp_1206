@@ -2,29 +2,24 @@
 <head>
    <%= form_with model: @user,url: new_user_registration_path,class:'registration-main', local: true do |f| %>
     <link rel="stylesheets" href="/registration.css">
-</head>
-<header>
-       <div class='form-wrap'>
-       <div class='form-header'>
-       <h1 class= 'form-header-text'>
-          新規登録
-       </h1>
-       </div>
-      </div>
-</header>
-
+   </head>
+       <div class="overlay">
+       <form>
+        <div class="con">
+          <header class="head-form"></header>
+          <h2>新規登録</h2>
+        </div>
+    
+<body>
   <%#= render 'shared/error_massages',model: f.object %>
- 
-  <div class= "form-group">
-    <div class= 'form-text-wrap'>
-      <label class="form-text">お名前（全角)</label>
-      <span class="indispensable">必須</span>
-    </div>
-  <div class='input-name-wrap'>
-   <%= f.text_area :first_name, class: "input-name",id:"first_name",placeholder: "例) 山田"%>
-  <%= f.text_area :last_name, class: "input-name",id:"last_name",placeholder: "例) 太郎"%>
-  </div>
- </div>
+      <div class="field-set">
+       <label class="form-text">お名前（全角)</label>
+       <span class="indispensable">必須</span>
+       </div>
+        <div class='input-name-wrap'>
+           <%= f.text_area :first_name, class: "input-name",id:"first_name",placeholder: "例) 山田"%>
+           <%= f.text_area :last_name, class: "input-name",id:"last_name",placeholder: "例) 太郎"%>
+        </div>
   <div class= "form-group">
     <div class= 'form-text-wrap'>
      <label class="form-text">お名前（カナ)</label>
@@ -90,5 +85,7 @@
   <div class='register-btn'>
     <%= f.submit "会員登録" ,class:"register-red-btn" %>
   </div>
+</form>
+</body>
 <% end %>
 <%#= render "shared/second-footer" %>

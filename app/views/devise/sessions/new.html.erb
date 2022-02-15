@@ -3,8 +3,10 @@
    <%= form_with model: @user,url: new_user_registration_path,class:'registration-main', local: true do |f| %>
    <link rel="stylesheets" href="use/login.css">
 </head>
+<body>
   <div class='form-wrap'>
     <div class='form-header'>
+    <script src="new.js"></script>
      <h1 class='form-header-text'>
        会員情報入力
         </h1>
@@ -29,5 +31,6 @@
    <%= f.submit "ログイン" ,class:"login-red-btn" %>
   </div>
   </div>
+</body>
 <% end %>
 <%#= render "shared/second-footer" %>

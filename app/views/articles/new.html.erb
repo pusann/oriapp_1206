@@ -2,8 +2,7 @@
 templates/edit.html
 記事編集ページ
 -->
-{ % extends "layout.html" %}
-{% block content %}
+    <#link rel="stylesheets" href="application.css"> %>
 
 <br>
 <h1>MY Blog Name |管理人ページ</h1>
@@ -21,13 +20,9 @@ templates/edit.html
        <h3>内容</h3>
        <texttarea name="contents" id="contents"></textarea>
        <h3>カテゴリ</h3>
-       {% for cat in categories %}
        <input type="radio" name="category" value="{{cat['slug']}}">{{cat['name']}}
-       {% endfor %}
        <h3>タグ</h3>
-       {% for tag in tags %}
        <input type="checkbox" name="tags[]"value="{{tag['slug']}}">{{tag['name']}}
-       {% endfor %}
        <h3>詳細・抜粋</h3>
        <texttarea name="description" id="description"></textarea>
        <p>
