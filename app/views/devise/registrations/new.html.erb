@@ -3,16 +3,17 @@
    <%= form_with model: @user,url: new_user_registration_path,class:'registration-main', local: true do |f| %>
     <link rel="stylesheets" href="/registration.css">
    </head>
-       <div class="overlay">
-       <form>
-        <div class="con">
-          <header class="head-form"></header>
-          <h2>新規登録</h2>
-        </div>
+       <div class='form-wrap'>
+      <div class='form-header'>
+      <h1 class='form-header-text'>
+         会員情報入力
+      </h1>
+     </div>
     
 <body>
   <%#= render 'shared/error_massages',model: f.object %>
-      <div class="field-set">
+      <div class="form-group">
+      <div class='form-text-wrap'>
        <label class="form-text">お名前（全角)</label>
        <span class="indispensable">必須</span>
        </div>
