@@ -7,4 +7,5 @@ class Article < ApplicationRecord
   validates :age,presence: true
 
   belongs_to :users
+  
 end

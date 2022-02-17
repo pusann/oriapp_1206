@@ -1,10 +1,11 @@
 <%#= render "shared/second-header"%>
 <head>
-   <%= form_with model: @user,url: new_user_registration_path,class:'registration-main', local: true do |f| %>
+   <%= form_with model: @user,url: user_registration_path,class:'registration-main', local: true do |f| %>
     <link rel="stylesheets" href="/registration.css">
    </head>
        <div class='form-wrap'>
       <div class='form-header'>
+      <div class="image-singup" style="background:url(images/sin.png); background-size:cover;">
       <h1 class='form-header-text'>
          会員情報入力
       </h1>
@@ -86,6 +87,7 @@
   <div class='register-btn'>
     <%= f.submit "会員登録" ,class:"register-red-btn" %>
   </div>
+ </di>
 </form>
 </body>
 <% end %>

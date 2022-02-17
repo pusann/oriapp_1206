@@ -3,7 +3,7 @@ class RoomsController < ApplicationController
   end
 
   def new
-    @room = Room.new
+    @rooms = Room.new
   end
   def create
     @room = Room.new(room_params)

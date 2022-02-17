@@ -1,5 +1,7 @@
 .registration-main {
-
+  width: auto;
+  height: 100px;
+  background-color: white;
 }
 .form-wrap {
 
