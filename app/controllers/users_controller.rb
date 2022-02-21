@@ -14,6 +14,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).parmit(:first_name,:last_name,:first_name_kana,:last_name_kana,:nickname,:email,:sex_id,:age,:password,:category_id)
+    params.require(:user).parmit(:first_name,:last_name,:first_name_kana,:last_name_kana,:nickname,:sex_id,:age,:category_id)
   end
 end

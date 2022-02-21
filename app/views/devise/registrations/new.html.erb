@@ -3,9 +3,8 @@
    <%= form_with model: @user,url: user_registration_path,class:'registration-main', local: true do |f| %>
     <link rel="stylesheets" href="/registration.css">
    </head>
-       <div class='form-wrap'>
+      <div class='form-wrap'>
       <div class='form-header'>
-      <div class="image-singup" style="background:url(images/sin.png); background-size:cover;">
       <h1 class='form-header-text'>
          会員情報入力
       </h1>
@@ -13,6 +12,7 @@
     
 <body>
   <%#= render 'shared/error_massages',model: f.object %>
+  <div class="image-singup" style="background:url(images/sin.png); background-size:cover;">
       <div class="form-group">
       <div class='form-text-wrap'>
        <label class="form-text">お名前（全角)</label>
@@ -48,7 +48,7 @@
   </div>
 
   <p>性別</p>
-  <select name="sex">
+  <select name="sex_id">
     <option value="男性">男性</option>
     <option value="女性">女性</option>
     </select>
@@ -87,7 +87,8 @@
   <div class='register-btn'>
     <%= f.submit "会員登録" ,class:"register-red-btn" %>
   </div>
- </di>
+ </div>
+</div>
 </form>
 </body>
 <% end %>
