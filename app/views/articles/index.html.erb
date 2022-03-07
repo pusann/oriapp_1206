@@ -2,8 +2,7 @@
 <html>
  <header>
    <% meta charset="UTF-8">
-   <#% link rel="stylesheets" href="application.css" %>
-      <div class="top-page-header">
+      <div  class="top-page-header">
       <% if user_signed_in? %>
         <div class="lists-left">
         <%= link_to "ログアウト",articles_path,method: :delete, class: "logout" %>
