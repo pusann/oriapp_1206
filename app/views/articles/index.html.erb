@@ -1,8 +1,6 @@
 <!DOCTYPE HTML>
 <html>
  <header>
-   <% meta charset="UTF-8">
-      <div  class="top-page-header">
       <% if user_signed_in? %>
         <div class="lists-left">
         <%= link_to "ログアウト",articles_path,method: :delete, class: "logout" %>
